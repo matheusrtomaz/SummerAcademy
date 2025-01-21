@@ -8,6 +8,7 @@ const HomeStyles = styled.div`
         height: 550px;
         margin-top: 50px;
         padding: 25px;
+        border: 7px solid rgb(255, 255, 255);
         background: linear-gradient(
             to bottom,
             rgb(108, 210, 224),
