@@ -7,10 +7,14 @@ const HomeStyles = styled.div`
         text-align: start;
         height: 550px;
         margin-top: 50px;
-        padding: 20px;
-        background: linear-gradient(to bottom, rgb(108, 210, 224), rgb(208, 133, 218));
+        padding: 25px;
+        background: linear-gradient(
+            to bottom,
+            rgb(108, 210, 224),
+            rgb(208, 133, 218)
+        );
         color: #0d1117;
-        border-radius: 10px;
+        border-radius: 15px;
         box-shadow: 0px 0px 10px 2px rgba(182, 184, 187, 0.22);
         h1 {
             font-size: 1.7rem;
