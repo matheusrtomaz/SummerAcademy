@@ -2,6 +2,7 @@ import React from "react";
 import HomeStyles from "./HomeStyles";
 import { Input } from "../components/Input";
 import { Title } from "../components/Title";
+import { Items } from "../components/Items";
 
 function Home() {
     return (
@@ -10,8 +11,9 @@ function Home() {
                 <Title />
                 <div>
                     <Input />
-                    <Input />
-                    <Input />
+                </div>
+                <div>
+                    <Items />
                 </div>
             </div>
         </HomeStyles>

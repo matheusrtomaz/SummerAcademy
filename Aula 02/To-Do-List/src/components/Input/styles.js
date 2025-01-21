@@ -5,7 +5,7 @@ export const InputStyles = styled.div`
         width: 80%;
         height: 40px;
         margin-top: 20px;
-        padding: 10px;
+        padding: 10px 10px 10px 10px;
         border: 3px solid #F0F6FC;
         border-radius: 15px;
         font-size: 1rem;
@@ -23,7 +23,6 @@ export const InputStyles = styled.div`
         height: 40px;
         margin-top: 20px;
         margin-left: 10px;
-        padding: 10px;
         border: 3px solid #F0F6FC;
         border-radius: 15px;
         font-size: 1rem;
