@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { InputStyles } from "./styles";
 
-export function Input() {
-    const [task, setTask] = React.useState("");
+export function Input({ addTask }) {
+    const [task, setTask] = useState("");
 
     const handleButtonClick = () => {
+        addTask(task);
         setTask("");
     };
 
@@ -19,9 +20,8 @@ export function Input() {
             />
             <input
                 className="ibutton"
-                type="button"
+                type="submit"
                 value="+"
-                placeholder=""
                 onClick={handleButtonClick}
             />
         </InputStyles>

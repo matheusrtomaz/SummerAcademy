@@ -1,31 +1,27 @@
 import React from "react";
 import { ItemsStyles } from "./styles";
 
-export function Items() {
+export function Items({ tasks, removeTask, completeTask }) {
     return (
         <ItemsStyles>
             <ul>
-                <li>
-                    Estudar
-                    <div>
-                        <i id="check" class="bx bx-check-square"></i>
-                        <i id="remove" class="bx bx-trash"></i>
-                    </div>
-                </li>
-                <li>
-                    Trabalhar
-                    <div>
-                        <i id="" class="bx bx-check-square"></i>
-                        <i id="" class="bx bx-trash"></i>
-                    </div>
-                </li>
-                <li>
-                    Descansar
-                    <div>
-                        <i id="" class="bx bx-check-square"></i>
-                        <i id="" class="bx bx-trash"></i>
-                    </div>
-                </li>
+                {tasks.map((task, index) => (
+                    <li key={index}>
+                        {task}
+                        <div>
+                            <i
+                                id="check"
+                                className="bx bx-check-square"
+                                onClick={() => completeTask(index)}
+                            ></i>
+                            <i
+                                id="remove"
+                                className="bx bx-trash"
+                                onClick={() => removeTask(index)}
+                            ></i>
+                        </div>
+                    </li>
+                ))}
             </ul>
         </ItemsStyles>
     );

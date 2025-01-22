@@ -35,6 +35,41 @@ const HomeStyles = styled.div`
             min-width: 300px;
         }
     }
+    .completed-container li {
+        list-style: none;
+        width: 260px;
+        height: 40px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 3px solid #f0f6fc;
+        border-radius: 15px;
+        font-size: 1rem;
+        background-color: rgb(96, 191, 100);
+        color: #f0f6fc;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        button {
+            color: #f0f6fc;
+            background-color: transparent;
+            border: none;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            padding-left: 7px;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+        button:active {
+            transform: scale(0.8);
+            transition: transform 0.2s ease-in-out;
+        }
+        button:hover {
+            color: red;
+            transition: color 0.2s ease-in-out;
+        }
+    }
 `;
 
 export default HomeStyles;
