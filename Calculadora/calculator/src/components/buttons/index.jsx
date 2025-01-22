@@ -1,9 +1,9 @@
 import React from 'react'
 
-export funcion Button() {
+export function Button() {
     return(
         <ButtonStyle>
-            
+
         </ButtonStyle>
     )
 }
