@@ -19,9 +19,8 @@ export function Input() {
             />
             <input
                 className="ibutton"
-                type="button"
+                type="submit"
                 value="+"
-                placeholder=""
                 onClick={handleButtonClick}
             />
         </InputStyles>
