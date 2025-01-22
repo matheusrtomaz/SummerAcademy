@@ -1,7 +1,7 @@
 import React from "react";
 import { ItemsStyles } from "./styles";
 
-export function Items({ tasks, removeTask }) {
+export function Items({ tasks, removeTask, completeTask }) {
     return (
         <ItemsStyles>
             <ul>
@@ -12,7 +12,7 @@ export function Items({ tasks, removeTask }) {
                             <i
                                 id="check"
                                 className="bx bx-check-square"
-                                onClick={() => alert(`Concluído: ${task}`)}
+                                onClick={() => completeTask(index)}
                             ></i>
                             <i
                                 id="remove"
