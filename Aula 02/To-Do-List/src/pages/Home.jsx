@@ -3,6 +3,7 @@ import HomeStyles from "./HomeStyles";
 import { Input } from "../components/Input";
 import { Title } from "../components/Title";
 import { Items } from "../components/Items";
+import { Finish } from "../components/Finish";
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
                 <div>
                     <Items />
                 </div>
+                <Finish />
             </div>
         </HomeStyles>
     );

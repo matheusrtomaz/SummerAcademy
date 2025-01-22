@@ -27,11 +27,17 @@ export const ItemsStyles = styled.ul`
             font-size: 1.3rem;
             cursor: pointer;
         }
+        i.bx:active {
+            transform: scale(0.8);
+            transition: transform 0.1s ease-in-out;
+        }
         i#check:hover {
             color: green;
+            transition: transform 0.1s ease-in-out;
         }
         i#remove:hover {
             color: red;
+            transition: transform 0.1s ease-in-out;
         }
     }
 `;
