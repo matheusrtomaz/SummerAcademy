@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeStyles from "./HomeStyles";
 import { Input } from "../components/Input";
-import { Title } from "../components/Title";
 import { Items } from "../components/Items";
-import { Finish } from "../components/Finish";
 
 function Home() {
+    const [tasks, setTasks] = useState([]);
+
+    const addTask = (task) => {
+        if (task.trim() !== "") {
+            setTasks([...tasks, task]);
+        }
+    };
+
+    const removeTask = (index) => {
+        const updatedTasks = tasks.filter((_, i) => i !== index);
+        setTasks(updatedTasks);
+    };
+
     return (
         <HomeStyles>
             <div className="home">
-                <Title />
+                <h1>To-Do List</h1>
                 <div>
-                    <Input />
+                    <Input addTask={addTask} />
                 </div>
                 <div>
-                    <Items />
+                    <Items tasks={tasks} removeTask={removeTask} />
                 </div>
-                <Finish />
             </div>
         </HomeStyles>
     );
