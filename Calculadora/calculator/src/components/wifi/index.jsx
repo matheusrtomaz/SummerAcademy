@@ -11,7 +11,7 @@ export function Wifi() {
             setWifiSignal(signalStrength);
         }
 
-        const interval = setInterval(updateWifiSignal, 5000);
+        const interval = setInterval(updateWifiSignal, 1000);
         updateWifiSignal();
 
         return () => clearInterval(interval);
@@ -25,11 +25,11 @@ export function Wifi() {
                         {wifiSignal > 75 ? (
                             <LuWifi />
                         ) : wifiSignal > 50 ? (
-                            <LuWifiHigh />
+                            <LuWifi />
                         ) : wifiSignal > 25 ? (
-                            <LuWifiLow />
+                            <LuWifi />
                         ) : (
-                            <LuWifiZero />
+                            <LuWifi />
                         )}
                     </span>
                     {/* <span>{`${wifiSignal}%`}</span> */}

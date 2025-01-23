@@ -11,25 +11,28 @@ export const ButtonsStyles = styled.div`
         justify-content: flex-start;
         align-items: center;
         padding: 7px 20px;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
     .dir {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         padding: 7px 20px;
         font-size: 1rem;
     }
 `;
 
-// export const RedeStyles = styled.div`
-//     padding: 5px;
-// `;
+export const RedeStyles = styled.div`
+    /* padding: 5px; */
+    font-size: 0.6rem;
+`;
 
 export const WifiStykes = styled.div`
-    padding-left: 5px;
+    padding-left: 3px;
+    font-size: 0.7rem;
 `;
 
 export const BateryStyles = styled.div`
-    padding-left: 5px;
+    padding-left: 3px;
+    padding-top: 2px;
 `;

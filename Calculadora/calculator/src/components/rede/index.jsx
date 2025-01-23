@@ -1,5 +1,8 @@
 import React from "react";
-import { LuEllipsis, LuSignal, LuSignalHigh, LuSignalLow, LuSignalMedium, LuSignalZero } from "react-icons/lu";
+// import { BiSignal4 } from "react-icons/bi";
+import { FaSignal } from "react-icons/fa";
+// import { LuEllipsis, LuSignal, LuSignalHigh, LuSignalLow, LuSignalMedium, LuSignalZero } from "react-icons/lu";
+// import { PiCellSignalFullBold, PiCellSignalHighBold } from "react-icons/pi";
 
 export function Rede() {
     const [redeSignal, setRedeSignal] = React.useState(null);
@@ -22,20 +25,20 @@ export function Rede() {
                 <div>
                     <span>
                         {redeSignal > 80 ? (
-                            <LuSignal />
+                            <FaSignal />
                         ) : redeSignal > 60 ? (
-                            <LuSignalHigh />
+                            <FaSignal />
                         ) : redeSignal > 40 ? (
-                            <LuSignalMedium />
+                            <FaSignal />
                         ) : redeSignal > 20 ? (
-                            <LuSignalLow />
+                            <FaSignal />
                         ) : (
-                            <LuSignalZero />
+                            <FaSignal />
                         )}
                     </span>
                 </div>
             ) : (
-                <LuEllipsis />
+                <FaSignal />
             )}
         </div>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-import { LuBattery, LuBatteryFull, LuBatteryLow, LuBatteryMedium, LuBatteryWarning } from "react-icons/lu";
+import { IoIosBatteryDead, IoIosBatteryFull } from "react-icons/io";
 
 export function Batery() {
     const [batteryLevel, setBatteryLevel] = React.useState(null);
@@ -25,18 +25,18 @@ export function Batery() {
                 <div>
                     <span>
                         {batteryLevel > 75 ? (
-                            <LuBatteryFull />
+                            <IoIosBatteryFull />
                         ) : batteryLevel > 50 ? (
-                            <LuBatteryMedium />
+                            <IoIosBatteryFull />
                         ) : batteryLevel > 25 ? (
-                            <LuBatteryLow />
+                            <IoIosBatteryDead />
                         ) : (
-                            <LuBattery />
+                            <IoIosBatteryDead />
                         )}
                     </span>
                 </div>
             ) : (
-                <LuBatteryWarning />
+                <IoIosBatteryDead />
             )}
         </div>
     );
