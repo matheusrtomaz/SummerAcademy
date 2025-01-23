@@ -12,6 +12,9 @@ React.useEffect(() => {
 }, []);
 
 return (
-    <div>{currentTime}</div>
+    <div className="timerzao">
+       <div className="timer">{currentTime}</div> 
+    </div>
+    
 );
 }

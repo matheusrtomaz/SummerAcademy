@@ -1,0 +1,12 @@
+.timerzao {
+    display: flex;
+}
+
+.timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { LuWifi, LuWifiHigh, LuWifiLow, LuWifiOff, LuWifiZero } from "react-icons/lu";
 
 export function Wifi() {
     const [wifiSignal, setWifiSignal] = React.useState(null);
@@ -21,12 +22,20 @@ export function Wifi() {
             {wifiSignal !== null ? (
                 <div>
                     <span>
-                        {wifiSignal > 75 ? <i class='bx bx-wifi'></i> : wifiSignal > 50 ? <i class='bx bx-wifi-2' ></i> : wifiSignal > 25 ? <i class='bx bx-wifi-1' ></i> : <i class='bx bx-wifi-0'></i>}
+                        {wifiSignal > 75 ? (
+                            <LuWifi />
+                        ) : wifiSignal > 50 ? (
+                            <LuWifiHigh />
+                        ) : wifiSignal > 25 ? (
+                            <LuWifiLow />
+                        ) : (
+                            <LuWifiZero />
+                        )}
                     </span>
-                    <span>{`${wifiSignal}%`}</span>
+                    {/* <span>{`${wifiSignal}%`}</span> */}
                 </div>
             ) : (
-                <i class='bx bx-wifi-off' ></i>
+                <LuWifiOff />
             )}
         </div>
     );
