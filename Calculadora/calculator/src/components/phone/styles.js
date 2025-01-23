@@ -5,6 +5,7 @@ export const PhoneStyles = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 5%;
+    box-sizing: border-box;
 
     div.phone {
         display: flex;
@@ -15,6 +16,7 @@ export const PhoneStyles = styled.div`
         background-color: black;
         border-radius: 30px;
         position: relative;
+        box-sizing: border-box;
     }
 
     .bar {

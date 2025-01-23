@@ -67,20 +67,25 @@ export function Calculator() {
   const [history, setHistory] = useState('');
 
   const handleButtonClick = (value) => {
-    if (value === 'AC') return clearDisplay();
-    if (value === '=') return calculateResult();
+    if (value === 'AC') return limparDisplay();
+    if (value === '=') return calcularResultado();
     setCurrentInput((prev) => prev + value);
   };
 
-  const clearDisplay = () => {
+  const limparDisplay = () => {
     setCurrentInput('');
     setHistory('');
   };
 
-  const calculateResult = () => {
+  const calcularResultado = () => {
     try {
-      const result = eval(currentInput); // Substituir eval por biblioteca externa para maior segurança em produção.
-      setHistory(`${currentInput} = ${result}`);
+      const sanitizedInput = currentInput.replace(/÷/g, '/').replace(/x/g, '*').replace(/%/g, '/100');
+      if (/\/0/.test(sanitizedInput)) {
+        setCurrentInput('0');
+        return;
+      }
+      const result = eval(sanitizedInput); // Substituir eval por biblioteca externa para maior segurança em produção.
+      setHistory(`${currentInput}`);
       setCurrentInput(result.toString());
     } catch {
       setCurrentInput('Erro');
@@ -96,24 +101,24 @@ export function Calculator() {
   ];
 
   return (
-    // <div className='geral'>
     <div className="calculator">
       <div className="display">
-        <div className="history">{history}</div>
-        <div className="result">{currentInput || '0'}</div>
+      <div className="history">{history}</div>
+      <div className="result">
+        {currentInput.length > 6 ? currentInput.slice(0, 6) + '...' : currentInput || '0'}
+      </div>
       </div>
       <div className="buttons">
-        {buttons.map((btn, idx) => (
-          <button
-            key={idx}
-            onClick={() => handleButtonClick(btn)}
-            className={`button ${btn === '=' || btn === 'AC' || btn === '-' || btn === '*' || btn === '+' || btn === '÷' ? 'special' : ''} ${btn === '0' ? 'double' : ''}`}
-          >
-            {btn === '÷' ? '/' : btn === '*' ? 'x' : btn}
-          </button>
-        ))}
+      {buttons.map((btn, idx) => (
+        <button
+        key={idx}
+        onClick={() => handleButtonClick(btn)}
+        className={`button ${btn === '=' || btn === 'AC' || btn === '-' || btn === '*' || btn === '+' || btn === '÷' ? 'special' : ''} ${btn === '0' ? 'double' : ''}`}
+        >
+        {btn === '÷' ? '/' : btn === '*' ? 'x' : btn}
+        </button>
+      ))}
       </div>
     </div>
-    // </div>
   );
 }
