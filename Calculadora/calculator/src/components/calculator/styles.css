@@ -1,0 +1,120 @@
+/* .geral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: black;
+} */
+
+.calculator {
+    width: auto;
+    height: auto;
+    margin: auto;
+    background: black;
+    overflow: hidden;
+    /* padding: 20px; */
+    /* box-sizing: border-box; */
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    div.calculator {
+        width: 40vw;  /* Ajusta o tamanho para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    div.calculator {
+        width: 60vw;  /* Ajusta ainda mais para telas muito pequenas */
+    }
+}
+
+.display {
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.history {
+    font-size: 14px;
+    opacity: 0.7;
+    height: 20px;
+}
+
+.result {
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.7rem;
+    padding: 0.9rem;
+}
+
+button {
+    font-size: 1.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: #ddd;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.double {
+    grid-column: span 2;
+    width: auto;
+}
+
+button:hover {
+    background: #bbb;
+}
+
+button.special {
+    background: #ff9500;
+    color: #fff;
+}
+
+button.special:hover {
+    background: #e08900;
+}
+
+/* Media queries para a calculadora */
+@media (max-width: 768px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas para telas médias */
+        gap: 1rem;
+    }
+
+    button {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte para telas menores */
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .display {
+        font-size: 2rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr); /* Mesmo padrão de 4 colunas */
+    }
+
+    button {
+        font-size: 1rem; /* Reduz ainda mais para telas pequenas */
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .display {
+        font-size: 1.5rem;
+        padding: 6px 12px;
+    }
+}
