@@ -33,7 +33,7 @@
 .display {
     background: black;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-align: right;
 }
 
@@ -51,15 +51,16 @@
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.7rem;
+    gap: 0.6em;
     padding: 0.9rem;
 }
 
 button {
-    font-size: 1.5rem;
-    width: 3.2rem;
-    height: 3.2rem;
-    background: #ddd;
+    font-size: 1.6rem;
+    width: 3.3rem;
+    height: 3.3rem;
+    color: white;
+    background: #303131;
     border: none;
     border-radius: 10rem;
     cursor: pointer;
@@ -69,7 +70,17 @@ button {
 button.double {
     grid-column: span 2;
     width: auto;
+    padding-right: 4rem;
 }
+
+button.top {
+    background: #a5a5a5;
+    color: black;
+}
+
+/* button.maismenos {
+    
+} */
 
 button:hover {
     background: #bbb;
