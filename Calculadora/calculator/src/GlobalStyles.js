@@ -3,8 +3,12 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 
 /* @font-face {
-    font-family: 'SFUIText';
-    src: url('/assets/fonts/SFUIText-Regular.otf') format('opentype');
+    font-family: 'SFPRODISPLAYREGULAR';
+    src: url('/assets/fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
+} */
+/* @font-face {
+    font-family: 'SFPRODISPLAYMEDIUM';
+    src: url('/assets/fonts/SFPRODISPLAYMEDIUM.otf') format('opentype');
 } */
 
     * {
@@ -13,8 +17,9 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         text-decoration: none;
         outline: none;
-        font-family: sans-serif;
-        font-weight: lighter;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        /* font-weight: lighter; */
     }
 
     body {

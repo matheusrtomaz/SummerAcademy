@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./styles.css";
 import maisMenosIcon from "../../assets/images/mais-menos.png";
+import { RiDivideFill } from "react-icons/ri";
+import { BiX } from "react-icons/bi";
+import { FaMinus } from "react-icons/fa";
 
 export function Calculator() {
     const [currentInput, setCurrentInput] = useState("");
@@ -84,12 +87,20 @@ export function Calculator() {
                             btn === "AC" || btn === "±" || btn === "%"
                                 ? "top"
                                 : ""
-                        } ${btn === "±" ? "maismenos" : ""}`}
+                        } ${btn === "±" ? "maismenos" : ""} ${
+                            btn === "-" ? "minus" : ""
+                        } ${btn === "*" ? "multiply" : ""} ${
+                            btn === "÷" ? "dividir" : ""
+                        } ${btn === "+" ? "mais" : ""} ${
+                            btn === "=" ? "igual" : ""
+                        }`}
                     >
                         {btn === "÷" ? (
-                            "/"
+                            <RiDivideFill />
                         ) : btn === "*" ? (
-                            "x"
+                            <BiX />
+                        ) : btn === "-" ? (
+                            <FaMinus />
                         ) : btn === "±" ? (
                             <img
                                 src={maisMenosIcon}

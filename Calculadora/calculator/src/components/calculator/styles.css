@@ -78,9 +78,29 @@ button.top {
     color: black;
 }
 
-/* button.maismenos {
-    
-} */
+button.minus {
+    font-size: 1.0rem;
+    padding-top: 5px;
+}
+
+button.multiply {
+    font-size: 1.8rem;
+    padding-top: 6px;
+}
+
+button.dividir {
+    font-size: 1.8rem;
+    padding-top: 6px;
+}
+.mais {
+    font-size: 1.8rem;
+    padding-bottom: 3px;
+}
+
+.igual {
+    font-size: 1.9rem;
+    padding-bottom: 3px;
+}
 
 button:hover {
     background: #bbb;
@@ -89,6 +109,7 @@ button:hover {
 button.special {
     background: #ff9500;
     color: #fff;
+    font-weight: 500;
 }
 
 button.special:hover {
