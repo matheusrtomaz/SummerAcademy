@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HeaderContainer } from "./styles";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/cartContext";
 
 export function Header() {
+  const { getItemCount } = useContext(CartContext);
   return (
     <HeaderContainer>
       <div>
@@ -14,7 +16,9 @@ export function Header() {
             <li><Link to="/sobre">SOBRE NÓS</Link></li>
           </ul>
         </nav>
-        <span><Link to="/carrinho">CARRINHO</Link></span>
+        <span><Link to="/carrinho">CARRINHO</Link>
+        <span>({getItemCount()})</span>
+        </span>
       </div>
     </HeaderContainer>
   );

@@ -21,16 +21,6 @@ export function CartProvider({ children }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // // Adiciona um item ao carrinho
-  // const addToCart = (item) => {
-  //   console.log("Item adicionado ao carrinho:", item); // Debug
-  //   setCart((prevCart) => {
-  //     const updatedCart = [...prevCart, item];
-  //     localStorage.setItem("cart", JSON.stringify(updatedCart));
-  //     return updatedCart;
-  //   });
-  // };
-
   const addToCart = (item) => {
     // Garantir que o item tenha um id único
     if (!item.id) {
@@ -47,6 +37,7 @@ export function CartProvider({ children }) {
         console.warn("Item já está no carrinho:", item);
         return prevCart;
       }
+      
   
       const updatedCart = [...prevCart, item];
       localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -72,8 +63,12 @@ export function CartProvider({ children }) {
     });
   };
 
+  const getItemCount = () => {
+    return cart.reduce((total, item) => total + (item.quantity || 1), 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, getItemCount }}>
       {children}
     </CartContext.Provider>
   );
