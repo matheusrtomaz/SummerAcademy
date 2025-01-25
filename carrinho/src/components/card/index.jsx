@@ -1,13 +1,21 @@
 import React, { useContext } from "react";
 import { CardStyles } from "./styles";
 import { CartContext } from "../../context/cartContext";
+// import products from "../../../products.json";
 
-export function Card({ title, description, image, value, id }) {
+export function Card({ id, title, description, image, value }) {
   const { addToCart } = useContext(CartContext);
 
   const handleAddToCart = () => {
-    addToCart({ id, title, value, image });
+    if (!id) {
+      // Gere um ID único se o ID estiver indefinido
+      const generatedId = Math.random().toString(36).substr(2, 9);
+      addToCart({ id: generatedId, title, value, image });
+    } else {
+      addToCart({ id, title, value, image });
+    }
   };
+  
 
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
@@ -23,10 +31,12 @@ export function Card({ title, description, image, value, id }) {
           <img src={image} alt={title} />
         </div>
         <div>
+          {/* <span style={{ display: "none" }}>{id}</span> */}
           <h2>{title}</h2>
           <p>{truncateText(description, 50)}</p>
           <p>R$ {value.toFixed(2)}</p>
           <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+          {/* <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button> */}
         </div>
 
       </div>
