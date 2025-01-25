@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { CardStyles } from "./styles";
 import { CartContext } from "../../context/cartContext";
-// import products from "../../../products.json";
 
 export function Card({ id, title, description, image, value }) {
   const { addToCart } = useContext(CartContext);
@@ -31,12 +30,10 @@ export function Card({ id, title, description, image, value }) {
           <img src={image} alt={title} />
         </div>
         <div>
-          {/* <span style={{ display: "none" }}>{id}</span> */}
           <h2>{title}</h2>
           <p>{truncateText(description, 50)}</p>
           <p>R$ {value.toFixed(2)}</p>
           <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
-          {/* <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button> */}
         </div>
 
       </div>
