@@ -24,7 +24,7 @@ export const HeaderContainer = styled.div`
           color: white;
           cursor: pointer;
           &:hover {
-            color: red;
+            color: blue;
           }
         }
       }
