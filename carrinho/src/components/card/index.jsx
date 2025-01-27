@@ -7,7 +7,6 @@ export function Card({ id, title, description, image, value }) {
 
   const handleAddToCart = () => {
     if (!id) {
-      // Gere um ID único se o ID estiver indefinido
       const generatedId = Math.random().toString(36).substr(2, 9);
       addToCart({ id: generatedId, title, value, image });
     } else {

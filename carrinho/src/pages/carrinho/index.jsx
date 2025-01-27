@@ -4,7 +4,6 @@ import { CartContext } from "../../context/cartContext";
 
 export function Carrinho() {
   const { cart, removeFromCart } = useContext(CartContext);
-  console.log("Conteúdo do carrinho:", cart);
 
   const calcularTotal = () => {
     return cart.reduce((total, item) => {
@@ -16,7 +15,6 @@ export function Carrinho() {
       return total;
     }, 0);
   };
-  console.log("Conteúdo do carrinho:", cart);
 
   return (
     <div>
@@ -31,7 +29,7 @@ export function Carrinho() {
             <ul style={{ listStyleType: "none", padding: 0 }}>
               {cart.map((item) => (
                 <li
-                  key={item.id || Math.random()} // Use fallback, mas ideal é garantir um id único
+                  key={item.id || Math.random()}
                   style={{
                     display: "flex",
                     alignItems: "center",
