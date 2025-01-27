@@ -7,7 +7,6 @@ export function Carrinho() {
 
   const calcularTotal = () => {
     return cart.reduce((total, item) => {
-      // Verifica se o value é um número válido
       const itemValue = parseFloat(item.value);
       if (!isNaN(itemValue)) {
         return total + itemValue;
@@ -39,12 +38,12 @@ export function Carrinho() {
                   }}
                 >
                   <img
-                    src={item.image || "https://via.placeholder.com/50"}
-                    alt={item.title || "Produto"}
+                    src={item.image}
+                    alt={item.title}
                     style={{ width: "50px", height: "50px", marginRight: "10px" }}
                   />
                   <div>
-                    <h3>{item.title || "Produto sem título"}</h3>
+                    <h3>{item.title}</h3>
                     <p>R$ {item.value ? item.value.toFixed(2) : "0,00"}</p>
                     <button
                       onClick={() => removeFromCart(item.id)}
