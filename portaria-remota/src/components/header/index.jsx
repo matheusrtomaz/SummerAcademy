@@ -1,19 +1,20 @@
 import Logo from "../../assets/logo.png";
-import "./Header.module.css";
+import Avatar from "../../assets/perfil.jpeg";
+import styles from "./Header.module.css";
 
 export function Header() {
     return (
-        <div className="header">
-            <div className="mother">
-                <img className="logo" src={Logo} alt="Logo" />
-                <div className="user">
-                    <span>Roberto</span>
+        <div className={styles.header}>
+            <div className={styles.content}>
+                <img className={styles.logo} src={Logo} alt="Logo" />
+                <div className={styles.user}>
+                    <span className={styles.name}>Matheus</span>
                     <img
-                        className="avatar"
-                        src="https://github.com/matheusrtomaz.png"
+                        className={styles.avatar}
+                        src={Avatar}
                         alt="Avatar"
                     />
-                    <button>Sair</button>
+                    <button className={styles.btn_header}>Sair</button>
                 </div>
             </div>
         </div>

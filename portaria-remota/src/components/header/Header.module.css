@@ -4,6 +4,18 @@ div.header {
     align-items: center;
     width: 100vw;
     height: 88px;
+    background-color: var(--white);
+    color: var();
+    border-bottom: 1px solid var(--gray200);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px 0;
 }
 
 .logo {
@@ -11,15 +23,41 @@ div.header {
     width: auto;
 }
 
-/* .user {
-    margin-right: 20px;
+.user {
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+}
+
+.name {
+    color: var(--gray500);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
  
 img.avatar {
     width: 32px;
     height: 32px;
     border-radius: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.btn_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    padding: 8px 12px;
+    width: 47px;
+    height: 34px;
+    border: 1px solid var(--gray200);
+    border-radius: 9px;
+    background-color: var(--white);
+    color: var(--gray800);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 35px;
+    cursor: pointer;
 }
