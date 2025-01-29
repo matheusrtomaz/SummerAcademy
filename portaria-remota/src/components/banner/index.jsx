@@ -1,10 +1,9 @@
 import BannerMain from '../../assets/bannerMain.png';
-import BannerStyles from './styles';
 
 export function Banner() {
   return (
-    <BannerStyles>
+    <div>
       <img src={BannerMain} alt="Banner" />
-    </BannerStyles>
+    </div>
   )
 }

@@ -1,11 +1,11 @@
-import MainStyles from "./styles";
+import "./Main.module.css";
 
 export function Main() {
   return (
-    <MainStyles>
-      <div>
+    <div className="mae">
+      <div className="filha">
         <h1>Main</h1>
       </div>
-    </MainStyles>
+    </div>
   );
 }

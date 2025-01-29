@@ -1,0 +1,43 @@
+.footer {
+    width: 100vw;
+    height: 144px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    width: 1200px;
+    height: 100%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+}
+
+.copyright {
+    width: 16px;
+    height: auto;
+    align-items: center;
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 20px; /* Espaço entre os ícones */
+    align-items: center;
+}
+
+.iconss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: auto;
+}

@@ -1,19 +1,21 @@
-import React from "react";
-import HeaderStyles from "./styles";
 import Logo from "../../assets/logo.png";
-import Avatar from "../../assets/avatar.png";
+import "./Header.module.css";
 
 export function Header() {
-  return (
-    <HeaderStyles>
-      <div className="logo">
-        <img src={Logo} alt="Logo" />
-      </div>
-      <div className="user">
-        <span>Roberto</span>
-        <img src={Avatar} alt="" />
-        <button>Sair</button>
-      </div>
-    </HeaderStyles>
-  );
+    return (
+        <div className="header">
+            <div className="mother">
+                <img className="logo" src={Logo} alt="Logo" />
+                <div className="user">
+                    <span>Roberto</span>
+                    <img
+                        className="avatar"
+                        src="https://github.com/matheusrtomaz.png"
+                        alt="Avatar"
+                    />
+                    <button>Sair</button>
+                </div>
+            </div>
+        </div>
+    );
 }
