@@ -2,7 +2,7 @@ import { Banner } from "../../components/banner";
 import Cadastrando from "../../components/cadastrando";
 import Footer from "../../components/footer";
 import { Header } from "../../components/header";
-import { Main } from "../../components/main";
+import { Main } from "../../components/Main";
 
 export default function Cadastro() {
   return (
