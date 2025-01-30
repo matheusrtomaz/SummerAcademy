@@ -6,6 +6,7 @@ export function Banner() {
     <div className={style.banner}>
       <img className={style.img} src={BannerMain} alt="Banner" />
       <div className={style.blurBottom}></div> {/* Div para o blur na parte de baixo */}
+      <h1>oi</h1>
     </div>
   );
 }
