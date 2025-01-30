@@ -1,5 +1,5 @@
 import { Banner } from "../../components/banner";
-import BtnAddVisita from "../../components/btnaddvisita";
+import BtnAddVisita from "../../components/addvisita";
 import Footer from "../../components/footer";
 import { Header } from "../../components/header";
 import Listagem from "../../components/listagem";

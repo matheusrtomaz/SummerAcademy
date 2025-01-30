@@ -18,10 +18,3 @@ export default function Cadastro() {
     </div>
   );
 }
-
-// name={item.name}
-// date={item.date}
-// time={item.time}
-// typedoc={item.typedoc}
-// numdoc={item.numdoc}
-// obs={item.obs}
