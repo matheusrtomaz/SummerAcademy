@@ -1,0 +1,23 @@
+.list {
+  list-style: none;
+  
+}
+
+.btnvisita{
+  color: var(--white);
+  background-color: var(--prymary700);
+  padding: 14px 0px 14px 24px;
+  border-radius: 8px;
+  font-weight: 300;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.useradd {
+  color: var(--white);
+  width: 20px;
+  height: auto;
+  margin: 0px 24px 0px 8px;
+}
