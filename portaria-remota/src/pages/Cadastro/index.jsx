@@ -1,4 +1,5 @@
 import { Banner } from "../../components/banner";
+import ButtonVoltar from "../../components/buttonvoltar";
 import Cadastrando from "../../components/cadastrando";
 import Footer from "../../components/footer";
 import { Header } from "../../components/header";
@@ -12,6 +13,7 @@ export default function Cadastro() {
       <Main>
         <Cadastrando />
       </Main>
+      <ButtonVoltar />
       <Footer />
     </div>
   );
