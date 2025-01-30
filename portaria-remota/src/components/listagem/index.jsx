@@ -29,6 +29,7 @@ export default function Listagem() {
               <th className={style.th1}>VISITANTE</th>
               <th>DATA</th>
               <th>HORA</th>
+              <th className={style.thvazia}></th>
               <th className={style.th2}>STATUS</th>
             </tr>
           </thead>
@@ -38,14 +39,11 @@ export default function Listagem() {
                 <td>{visita.nome}</td>
                 <td>{visita.data}</td>
                 <td>{visita.hora}</td>
-                <td>{visita.status || 'Visita não realizada'}</td>
-                {/* <td>{visita.tipoDocumento}</td> */}
-                {/* <td>{visita.numeroDocumento}</td> */}
-                {/* <td>{visita.observacao}</td> */}
                 <td>
                 <button className={`${style.button} ${style.edit}`} onClick={() => handleEditar(index)}>Editar ✅</button>
                 <button className={`${style.button} ${style.cancel}`} onClick={() => handleCancelar(index)}>Cancelar visita 🌟</button>
               </td>
+                <td>{visita.status || 'Visita não realizada'}</td>
               </tr>
             ))}
           </tbody>
