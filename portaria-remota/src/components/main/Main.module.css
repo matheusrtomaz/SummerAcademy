@@ -1,20 +1,19 @@
-div.mae {
+  /* Estilo do Container do Main */
+  .container {
+    position: relative; /* Permite que o Main se mova em relação ao seu contêiner */
+    top: -73px; /* Move o Main 73px para cima */
+    z-index: 1; /* Garante que o Main fique acima do Banner */
+  }
+  
+  /* Estilo do Content do Main */
+  .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 1200px;
+    height: 750px;
     background-color: white;
-    color: black;
-}
-
-div.filha {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    height: 100vh;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
-    border-radius: 15px;
-    margin: 0px 0px 50px 0px;
-}
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }

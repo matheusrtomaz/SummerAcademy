@@ -23,15 +23,11 @@
     --gray900: #111928;
     --white: #fff;
     --black: #000;
+    --bg: #f2f2f2;
 }
 
-/* html { */
-        
-    /* background-color:rgb(44, 71, 112); */
-    /* color: black; */
-    /* display: flex; */
-/* justify-content: center; */
-/* align-items: center; */
-/* } */
+body {
+    background-color: var(--bg);
+}
 
 
