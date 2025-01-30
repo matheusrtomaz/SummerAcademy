@@ -1,7 +1,9 @@
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const VisitasContext = createContext();
 
+// eslint-disable-next-line react/prop-types
 export const VisitasProvider = ({ children }) => {
   // Carrega as visitas do LocalStorage ao inicializar
   const [visitas, setVisitas] = useState(() => {
@@ -26,9 +28,8 @@ export const VisitasProvider = ({ children }) => {
   };
 
   const cancelarVisita = (index) => {
-    // Lógica para cancelar a visita
-    const novasVisitas = [...visitas];
-    novasVisitas[index].status = 'Cancelada';
+    // Remove o agendamento da lista
+    const novasVisitas = visitas.filter((_, i) => i !== index);
     setVisitas(novasVisitas);
   };
 

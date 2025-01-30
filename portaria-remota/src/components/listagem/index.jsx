@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { VisitasContext } from "../../context/VisitasContext";
 import BtnAddVisita from "../addvisita";
 import style from "./Listagem.module.css";
@@ -11,10 +11,10 @@ export default function Listagem() {
     editarVisita(index);
   };
 
-  const handleCancelar = (index) => {
-    // Lógica para cancelar a visita
-    cancelarVisita(index);
-  };
+  // const handleCancelar = (index) => {
+  //   // Lógica para cancelar a visita
+  //   cancelarVisita(index);
+  // };
 
   return (
     <div className={style.container}>
@@ -35,14 +35,16 @@ export default function Listagem() {
           </thead>
           <tbody>
             {visitas.map((visita, index) => (
-              <tr key={index}>
-                <td>{visita.nome}</td>
+              <tr className={style.trbody} key={index}>
+                <td className={style.td1}>{visita.nome}</td>
                 <td>{visita.data}</td>
                 <td>{visita.hora}</td>
                 <td>
-                <button className={`${style.button} ${style.edit}`} onClick={() => handleEditar(index)}>Editar ✅</button>
-                <button className={`${style.button} ${style.cancel}`} onClick={() => handleCancelar(index)}>Cancelar visita 🌟</button>
-              </td>
+                  <button className={`${style.button} ${style.edit}`} onClick={() => handleEditar(index)}>Editar ✅</button>
+                  <button className={`${style.button} ${style.cancel}`} onClick={() => cancelarVisita(index)}>
+                    Cancelar visita 🌟
+                  </button>
+                </td>
                 <td>{visita.status || 'Visita não realizada'}</td>
               </tr>
             ))}
