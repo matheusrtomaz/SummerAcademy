@@ -17,9 +17,23 @@ export const VisitasProvider = ({ children }) => {
   const adicionarVisita = (novaVisita) => {
     setVisitas([...visitas, novaVisita]);
   };
+  
+  const editarVisita = (index) => {
+    // Lógica para editar a visita
+    const novasVisitas = [...visitas];
+    novasVisitas[index].status = 'Editada';
+    setVisitas(novasVisitas);
+  };
+
+  const cancelarVisita = (index) => {
+    // Lógica para cancelar a visita
+    const novasVisitas = [...visitas];
+    novasVisitas[index].status = 'Cancelada';
+    setVisitas(novasVisitas);
+  };
 
   return (
-    <VisitasContext.Provider value={{ visitas, adicionarVisita }}>
+    <VisitasContext.Provider value={{ visitas, adicionarVisita, editarVisita, cancelarVisita }}>
       {children}
     </VisitasContext.Provider>
   );

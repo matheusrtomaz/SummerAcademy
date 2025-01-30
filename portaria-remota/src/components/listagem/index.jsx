@@ -4,7 +4,17 @@ import BtnAddVisita from "../addvisita";
 import style from "./Listagem.module.css";
 
 export default function Listagem() {
-  const { visitas } = useContext(VisitasContext);
+  const { visitas, editarVisita, cancelarVisita } = useContext(VisitasContext);
+
+  const handleEditar = (index) => {
+    // Lógica para editar a visita
+    editarVisita(index);
+  };
+
+  const handleCancelar = (index) => {
+    // Lógica para cancelar a visita
+    cancelarVisita(index);
+  };
 
   return (
     <div className={style.container}>
@@ -12,16 +22,14 @@ export default function Listagem() {
         <h2 className={style.gerencie}>Gerencie as suas visitas</h2>
         <BtnAddVisita />
       </div>
-      <div className={style.table}>
-        <table>
+      <div>
+        <table className={style.table}>
           <thead className={style.thead}>
             <tr>
-              <th>Visitante</th>
-              <th>Data</th>
-              <th>Hora</th>
-              <th>Tipo de Documento</th>
-              <th>Número do Documento</th>
-              <th>Observação</th>
+              <th className={style.th1}>VISITANTE</th>
+              <th>DATA</th>
+              <th>HORA</th>
+              <th className={style.th2}>STATUS</th>
             </tr>
           </thead>
           <tbody>
@@ -30,9 +38,14 @@ export default function Listagem() {
                 <td>{visita.nome}</td>
                 <td>{visita.data}</td>
                 <td>{visita.hora}</td>
-                <td>{visita.tipoDocumento}</td>
-                <td>{visita.numeroDocumento}</td>
-                <td>{visita.observacao}</td>
+                <td>{visita.status || 'Visita não realizada'}</td>
+                {/* <td>{visita.tipoDocumento}</td> */}
+                {/* <td>{visita.numeroDocumento}</td> */}
+                {/* <td>{visita.observacao}</td> */}
+                <td>
+                <button className={`${style.button} ${style.edit}`} onClick={() => handleEditar(index)}>Editar ✅</button>
+                <button className={`${style.button} ${style.cancel}`} onClick={() => handleCancelar(index)}>Cancelar visita 🌟</button>
+              </td>
               </tr>
             ))}
           </tbody>

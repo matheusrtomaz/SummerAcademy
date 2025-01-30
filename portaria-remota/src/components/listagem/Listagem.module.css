@@ -20,19 +20,88 @@
 }
 
 .gerencie {
-  font-size: 30px;
-  color: var(--gray900);
-  font-weight: bolder;
+    font-size: 30px;
+    color: var(--gray900);
+    font-weight: bolder;
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0px 40px 0px 40px;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
 }
 
 .thead {
-    background-color: var(--gray100);
-    color: var(--gray900);
+    border-bottom: 1px solid var(--gray200);
+    background-color: var(--gray50);
+    color: var(--gray500);
+}
+
+.table thead tr {
+    background-color: transparent;
+    text-align: left;
+}
+
+.table th {
+    padding: 16px 0px 16px 16px;
+    width: 16px;
+    height: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.th1 {
+    border-radius: 15px 0 0 0;
+}
+
+.th2 {
+    border-radius: 0 15px 0 0;
+}
+
+
+
+.table td {
+    padding: 12px 15px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.table tbody tr.active-row {
     font-weight: bold;
+    color: #009879;
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button.cancel {
+    background-color: #f44336;
+    /* Red */
 }
