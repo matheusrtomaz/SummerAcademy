@@ -33,11 +33,13 @@ export const VisitasProvider = ({ children }) => {
   };
 
   const cancelar2Visita = (index) => {
-    // Altera o status para "Cancelado" sem remover a linha
-    const novasVisitas = [...visitas];
-    novasVisitas[index].status = 'Cancelado';
-    setVisitas(novasVisitas);
-  };
+    setVisitas((prevVisitas) =>
+        prevVisitas.map((visita, i) =>
+            i === index ? { ...visita, status: "Cancelada" } : visita
+        )
+    );
+};
+
 
   return (
     <VisitasContext.Provider value={{ visitas, adicionarVisita, editarVisita, cancelarVisita, cancelar2Visita }}>

@@ -29,11 +29,6 @@
     width: 1122px;
     height: 513px;
     border-collapse: collapse;
-    /* margin: 20px 0; */
-    /* font-size: 0.9em; */
-    /* font-family: sans-serif; */
-    /* min-width: 400px; */
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
     border-radius: 14px;
 }
 
@@ -50,7 +45,6 @@
 
 .table th {
     padding: 16px 0px 16px 16px;
-    width: 160px;
     height: 50px;
     font-size: 12px;
     font-weight: 600;
@@ -80,41 +74,106 @@
     height: 66px;
     text-overflow: ellipsis; /* Adiciona "..." ao texto que não cabe */
     white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    padding-left: 16px;
 }
 
-/* .table tbody tr {
-    border-bottom: 1px solid #dddddd;
-} */
+.td1 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray900);
+}
+
+.td2, .td3 {
+    color: var(--gray500);
+    font-size: 14px;
+    font-weight: normal;
+}
 
 .table tbody tr:nth-of-type(even) {
     background-color: var(--gray050);
 }
 
-/* .table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-} */
-
-/* .table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-} */
 
 .button {
-    background-color: #4caf50;
-    /* Green */
-    border: none;
-    color: white;
-    /* padding: 5px 10px; */
-    text-align: center;
-    text-decoration: none;
+    background-color: var(--white);
+    border: 1px solid var(--gray200);
+    color: var(--gray800);
+    padding: 8px 0 8px 12px;
     display: inline-block;
+    align-items: center;
+    justify-content: center;
     font-size: 12px;
-    /* margin: 2px 2px; */
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 16px; /* Add margin to separate buttons */
 }
 
+
 .button.cancel {
-    background-color: #f44336;
-    /* Red */
+    background-color: var(--white);
+    border: 1px solid var(--gray200);
+    color: var(--gray800);
+    padding: 8px 0 8px 12px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 16px; /* Add margin to separate buttons */
 }
+
+
+
+
+.icons {
+    width: 14px;
+    height: 14px;
+    margin-bottom: -3px;
+    margin-left: 8px;
+    margin-right: 12px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+
+
+
+
+
+
+
+.realizada {
+    color: var(--blue800);
+    background-color: var(--blue100);
+    font-weight: normal;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.naoRealizada {
+    color: var(--red800);
+    background-color: var(--red200);
+    font-weight: normal;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.cancelada {
+    color: var(--green800);
+    background-color: var(--green200);
+    font-weight: normal;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
