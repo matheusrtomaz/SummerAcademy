@@ -118,10 +118,12 @@ export default function Cadastrando() {
                     </div>
                     <div className={styles.divdosbotoes}>
                         <div className={styles.divdosbotoesinterna}>
-                            <button className={styles.button2}>
-                                <Link to="/" className={styles.link}>
-                                    Voltar
-                                </Link>
+                            <button
+                                type="button"
+                                onClick={() => navigate("/")}
+                                className={styles.button2}
+                            >
+                                Voltar
                             </button>
                             <button type="submit" className={styles.button}>
                                 Salvar
