@@ -18,7 +18,7 @@ export function Banner({ showButtonVoltar, showLogoPredio }) {
             )}
 
             {showLogoPredio && (
-                <div className={style.divbtn}>
+                <div className={style.divbtn2}>
                     <LogoPredio className={style.buttonvoltar} />
                 </div>
             )}

@@ -36,3 +36,10 @@
     left: 160px; /* Ajuste a distância da direita */
     z-index: 2; /* Garante que o botão fique acima do banner */
 }
+
+.divbtn2 {
+    position: absolute;
+    top: 131px; /* Ajuste para subir mais */
+    left: 160px; /* Ajuste a distância da direita */
+    z-index: 2; /* Garante que o botão fique acima do banner */
+}
