@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     height: 450px;
-    overflow: hidden; /* Esconde o excesso de blur */
+    overflow: visible; /* Altere para visible se o botão estiver sendo cortado */
 }
 
 .img {
@@ -21,4 +21,18 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /* Gradiente escuro */
     backdrop-filter: blur(5px); /* Aplica o blur apenas nesta área */
     z-index: 1;
+}
+
+/* .buttonvoltar {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 2;
+} */
+
+.divbtn {
+    position: absolute;
+    top: 240px; /* Ajuste para subir mais */
+    left: 160px; /* Ajuste a distância da direita */
+    z-index: 2; /* Garante que o botão fique acima do banner */
 }
