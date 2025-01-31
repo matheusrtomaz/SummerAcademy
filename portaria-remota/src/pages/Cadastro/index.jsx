@@ -9,7 +9,7 @@ export default function Cadastro() {
     <div>
       <Header />
       <Banner />
-      <Main>
+      <Main isCadastro={true}> {/* Passando a prop isCadastro */}
         <Cadastrando />
       </Main>
       <Footer />

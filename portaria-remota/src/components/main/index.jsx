@@ -1,10 +1,9 @@
 import style from "./Main.module.css";
-// import { VisitasProvider } from "../../context/VisitasProvider";
 
-export function Main({children}) {
+export function Main({ children, isCadastro }) {
   return (
-    <div className={style.container}>
-      <div className={style.content}>
+    <div className={`${style.container} ${isCadastro ? style.cadastroContainer : ""}`}>
+      <div className={`${style.content} ${isCadastro ? style.cadastroContent : ""}`}>
         {children}
       </div>
     </div>
