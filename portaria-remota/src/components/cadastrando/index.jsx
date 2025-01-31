@@ -15,6 +15,17 @@ export default function Cadastrando() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const now = new Date();
+        const selectedDate = new Date(`${date}T${time}`);
+
+        if (selectedDate < now) {
+            alert(
+                "Não é possível agendar uma visita para uma data ou hora anterior à atual."
+            );
+            return;
+        }
+
         const novaVisita = {
             nome: name,
             data: date,
