@@ -146,6 +146,15 @@
 
 
 .realizada {
+    color: var(--green800);
+    background-color: var(--green200);
+    font-weight: normal;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.naoRealizada {
     color: var(--blue800);
     background-color: var(--blue100);
     font-weight: normal;
@@ -154,18 +163,9 @@
     border-radius: 10px;
 }
 
-.naoRealizada {
+.cancelada {
     color: var(--red800);
     background-color: var(--red200);
-    font-weight: normal;
-    font-size: 12px;
-    padding: 2px 10px;
-    border-radius: 10px;
-}
-
-.cancelada {
-    color: var(--green800);
-    background-color: var(--green200);
     font-weight: normal;
     font-size: 12px;
     padding: 2px 10px;

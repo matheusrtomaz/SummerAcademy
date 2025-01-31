@@ -123,7 +123,6 @@ export default function Listagem() {
                                         </>
                                     ) : null}
                                 </td>
-                                {/* <td className={getStatusClass(getStatusVisita(visita))}>{getStatusVisita(visita)}</td> */}
                                 <td>
                                     <span
                                         className={getStatusClass(
