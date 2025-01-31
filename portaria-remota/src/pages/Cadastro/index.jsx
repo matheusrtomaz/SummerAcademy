@@ -8,8 +8,8 @@ export default function Cadastro() {
   return (
     <div>
       <Header />
-      <Banner />
-      <Main isCadastro={true}> {/* Passando a prop isCadastro */}
+      <Banner showButtonVoltar={true} /> {/* Botão "Voltar" será exibido */}
+      <Main isCadastro={true}>
         <Cadastrando />
       </Main>
       <Footer />

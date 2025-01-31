@@ -8,11 +8,12 @@ export default function Editar() {
   return (
     <div>
       <Header />
-      <Banner />
-      <Main isCadastro={true}> {/* Passando a prop isCadastro */}
+      <Banner showButtonVoltar={true} /> {/* Botão "Voltar" será exibido */}
+      <Main isCadastro={true}>
         <Editando />
       </Main>
       <Footer />
     </div>
   );
 }
+
