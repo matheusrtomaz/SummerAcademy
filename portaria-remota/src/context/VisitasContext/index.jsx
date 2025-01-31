@@ -20,10 +20,9 @@ export const VisitasProvider = ({ children }) => {
     setVisitas([...visitas, novaVisita]);
   };
   
-  const editarVisita = (index) => {
-    // Lógica para editar a visita
+  const editarVisita = (index, visitaEditada) => {
     const novasVisitas = [...visitas];
-    novasVisitas[index].status = 'Editada';
+    novasVisitas[index] = visitaEditada; // Atualiza a visita no índice especificado
     setVisitas(novasVisitas);
   };
 
@@ -33,8 +32,15 @@ export const VisitasProvider = ({ children }) => {
     setVisitas(novasVisitas);
   };
 
+  const cancelar2Visita = (index) => {
+    // Altera o status para "Cancelado" sem remover a linha
+    const novasVisitas = [...visitas];
+    novasVisitas[index].status = 'Cancelado';
+    setVisitas(novasVisitas);
+  };
+
   return (
-    <VisitasContext.Provider value={{ visitas, adicionarVisita, editarVisita, cancelarVisita }}>
+    <VisitasContext.Provider value={{ visitas, adicionarVisita, editarVisita, cancelarVisita, cancelar2Visita }}>
       {children}
     </VisitasContext.Provider>
   );

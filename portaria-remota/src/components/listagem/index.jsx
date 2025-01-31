@@ -2,21 +2,22 @@ import { useContext } from "react";
 import { VisitasContext } from "../../context/VisitasContext";
 import BtnAddVisita from "../addvisita";
 import style from "./Listagem.module.css";
+import { useNavigate } from "react-router"; // Corrigido aqui
 
 export default function Listagem() {
-    const { visitas, editarVisita, cancelarVisita } =
-        useContext(VisitasContext);
-
-    const handleEditar = (index) => {
-        // Lógica para editar a visita
-        editarVisita(index);
-    };
+    const { visitas, cancelarVisita, cancelar2Visita } = useContext(VisitasContext);
+    const navigate = useNavigate(); // Corrigido aqui
 
     // Garante que haja sempre 7 linhas no tbody
     const linhasPreenchidas = [...visitas];
     while (linhasPreenchidas.length < 7) {
         linhasPreenchidas.push({}); // Adiciona objetos vazios para preencher as linhas
     }
+
+    const handleEditar = (index) => {
+        // Navega para a tela de edição com os dados da visita selecionada
+        navigate("/editar", { state: { ...visitas[index], index } }); // Corrigido aqui
+    };
 
     return (
         <div className={style.container}>
@@ -38,9 +39,7 @@ export default function Listagem() {
                     <tbody>
                         {linhasPreenchidas.map((visita, index) => (
                             <tr className={style.trbody} key={index}>
-                                <td className={style.td1}>
-                                    {visita.nome || ""}
-                                </td>
+                                <td className={style.td1}>{visita.nome || ""}</td>
                                 <td>{visita.data || ""}</td>
                                 <td>{visita.hora || ""}</td>
                                 <td>
@@ -48,20 +47,24 @@ export default function Listagem() {
                                         <>
                                             <button
                                                 className={`${style.button} ${style.edit}`}
-                                                onClick={() =>
-                                                    editarVisita(index)
-                                                }
+                                                onClick={() => handleEditar(index)}
                                             >
                                                 Editar ✅
                                             </button>
                                             <button
                                                 className={`${style.button} ${style.cancel}`}
-                                                onClick={() =>
-                                                    cancelarVisita(index)
-                                                }
+                                                onClick={() => cancelarVisita(index)}
                                             >
                                                 Cancelar visita 🌟
                                             </button>
+                                            {visita.status !== "Cancelado" && ( // Mostra o botão "Cancelar2" apenas se o status NÃO for "Cancelado"
+                                                <button
+                                                    className={`${style.button} ${style.cancel}`}
+                                                    onClick={() => cancelar2Visita(index)}
+                                                >
+                                                    Cancelar2
+                                                </button>
+                                            )}
                                         </>
                                     ) : null}
                                 </td>
