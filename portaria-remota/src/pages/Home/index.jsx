@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Banner showButtonVoltar={false} /> {/* Botão "Voltar" não será exibido */}
+      <Banner showButtonVoltar={false} showLogoPredio={true}/>
       <Main>
         <Listagem />
       </Main>
