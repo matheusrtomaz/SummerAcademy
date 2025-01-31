@@ -10,7 +10,7 @@ export function Header() {
                 <Link to="/" className={styles.link}>
                     <img className={styles.logo} src={Logo} alt="Logo" />
                 </Link>
-                
+
                 <div className={styles.user}>
                     <span className={styles.name}>Matheus</span>
                     <img className={styles.avatar} src={Avatar} alt="Avatar" />

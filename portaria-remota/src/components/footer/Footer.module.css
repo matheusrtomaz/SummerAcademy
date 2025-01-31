@@ -34,7 +34,7 @@
 .iconsContainer {
     margin-right: 5px;
     display: flex;
-    gap: 20px; /* Espaço entre os ícones */
+    gap: 20px;
     align-items: center;
 }
 

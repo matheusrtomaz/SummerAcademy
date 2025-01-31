@@ -6,7 +6,8 @@ export default function Footer() {
         <div className={styles.footer}>
             <div className={styles.content}>
                 <p className={styles.text}>
-                    <Copyright className={styles.copyright} /> 2025 Accenture. All rights reserved.
+                    <Copyright className={styles.copyright} /> 2025 Accenture.
+                    All rights reserved.
                 </p>
                 <div className={styles.iconsContainer}>
                     <Facebook className={styles.iconss} />

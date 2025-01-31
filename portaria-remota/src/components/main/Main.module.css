@@ -1,28 +1,25 @@
-/* Estilo padrão do Container do Main */
 .container {
-  position: relative;
-  top: -73px;
-  z-index: 1;
+    position: relative;
+    top: -73px;
+    z-index: 1;
 }
 
-/* Estilo padrão do Content do Main */
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1200px;
-  height: 750px;
-  background-color: white;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 750px;
+    background-color: white;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 0 auto;
 }
 
-/* Estilos específicos para a página de cadastro */
 .cadastroContainer {
-  top: -141px; /* Ajuste o top para mover o Main para cima */
+    top: -141px;
 }
 
 .cadastroContent {
-  height: 868px; /* Aumente a altura para 868px */
+    height: 868px;
 }

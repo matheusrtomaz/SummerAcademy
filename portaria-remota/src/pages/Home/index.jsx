@@ -5,14 +5,14 @@ import Listagem from "../../components/listagem";
 import { Main } from "../../components/Main";
 
 export default function Home() {
-  return (
-    <div>
-      <Header />
-      <Banner showButtonVoltar={false} showLogoPredio={true}/>
-      <Main>
-        <Listagem />
-      </Main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <Banner showButtonVoltar={false} showLogoPredio={true} />
+            <Main>
+                <Listagem />
+            </Main>
+            <Footer />
+        </div>
+    );
 }

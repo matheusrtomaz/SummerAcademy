@@ -1,9 +1,7 @@
 .container {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
     flex-wrap: wrap;
     width: 1200px;
     height: 750px;
@@ -69,11 +67,10 @@
 }
 
 .table td {
-    /* padding: 12px 15px; */
     width: 160px;
     height: 66px;
-    text-overflow: ellipsis; /* Adiciona "..." ao texto que não cabe */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-overflow: ellipsis;
+    white-space: nowrap;
     padding-left: 16px;
 }
 
@@ -83,7 +80,8 @@
     color: var(--gray900);
 }
 
-.td2, .td3 {
+.td2,
+.td3 {
     color: var(--gray500);
     font-size: 14px;
     font-weight: normal;
@@ -92,7 +90,6 @@
 .table tbody tr:nth-of-type(even) {
     background-color: var(--gray050);
 }
-
 
 .button {
     background-color: var(--white);
@@ -105,9 +102,8 @@
     font-size: 12px;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 16px; /* Add margin to separate buttons */
+    margin-left: 16px;
 }
-
 
 .button.cancel {
     background-color: var(--white);
@@ -120,11 +116,8 @@
     font-size: 12px;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 16px; /* Add margin to separate buttons */
+    margin-left: 16px;
 }
-
-
-
 
 .icons {
     width: 14px;
@@ -132,18 +125,7 @@
     margin-bottom: -3px;
     margin-left: 8px;
     margin-right: 12px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
 }
-
-
-
-
-
-
-
 
 .realizada {
     color: var(--green800);
@@ -171,9 +153,3 @@
     padding: 2px 10px;
     border-radius: 10px;
 }
-
-
-
-
-
-

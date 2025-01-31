@@ -8,21 +8,16 @@ export function Banner({ showButtonVoltar, showLogoPredio }) {
         <div className={style.banner}>
             <img className={style.img} src={BannerMain} alt="Banner" />
             <div className={style.blurBottom}></div>{" "}
-            {/* Div para o blur na parte de baixo */}
-
-            {/* Renderize o botão "Voltar" condicionalmente */}
             {showButtonVoltar && (
                 <div className={style.divbtn}>
                     <ButtonVoltar className={style.buttonvoltar} />
                 </div>
             )}
-
             {showLogoPredio && (
                 <div className={style.divbtn2}>
                     <LogoPredio className={style.buttonvoltar} />
                 </div>
             )}
-
         </div>
     );
 }

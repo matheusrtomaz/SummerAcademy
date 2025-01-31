@@ -5,14 +5,14 @@ import { Header } from "../../components/header";
 import { Main } from "../../components/Main";
 
 export default function Cadastro() {
-  return (
-    <div>
-      <Header />
-      <Banner showButtonVoltar={true} /> {/* Botão "Voltar" será exibido */}
-      <Main isCadastro={true}>
-        <Cadastrando />
-      </Main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <Banner showButtonVoltar={true} />
+            <Main isCadastro={true}>
+                <Cadastrando />
+            </Main>
+            <Footer />
+        </div>
+    );
 }

@@ -1,14 +1,13 @@
 import { useState, useContext } from "react";
-import { useNavigate, useLocation } from "react-router"; // Certifique-se de importar corretamente
+import { useNavigate, useLocation } from "react-router";
 import { VisitasContext } from "../../context/VisitasContext";
-import styles from "./Editando.module.css"; // Importe o mesmo CSS
+import styles from "./Editando.module.css";
 
 export default function Editando() {
-    const { state } = useLocation(); // Recebe os dados da visita selecionada
+    const { state } = useLocation();
     const { editarVisita } = useContext(VisitasContext);
     const navigate = useNavigate();
 
-    // Estado local para os campos editáveis
     const [nome, setNome] = useState(state?.nome || "");
     const [data, setData] = useState(state?.data || "");
     const [hora, setHora] = useState(state?.hora || "");
@@ -21,7 +20,6 @@ export default function Editando() {
     const [observacao, setObservacao] = useState(state?.observacao || "");
 
     const handleSalvar = () => {
-        // Cria um objeto com os dados atualizados
         const visitaEditada = {
             nome,
             data,
@@ -31,10 +29,8 @@ export default function Editando() {
             observacao,
         };
 
-        // Chama a função de editar visita do contexto
         editarVisita(state.index, visitaEditada);
 
-        // Volta para a tela de listagem
         navigate("/");
     };
 

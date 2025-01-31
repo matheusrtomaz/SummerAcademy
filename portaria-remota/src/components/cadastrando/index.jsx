@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { VisitasContext } from "../../context/VisitasContext";
 import styles from "./Cadastrando.module.css";
-import { Link, useNavigate } from "react-router"; // Atualize o import
+import { useNavigate } from "react-router";
 
 export default function Cadastrando() {
     const { adicionarVisita } = useContext(VisitasContext);
@@ -11,7 +11,7 @@ export default function Cadastrando() {
     const [typedoc, setTipoDocumento] = useState("");
     const [numdoc, setNumeroDocumento] = useState("");
     const [obs, setObservacao] = useState("");
-    const navigate = useNavigate(); // Hook para navegação
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,15 +36,12 @@ export default function Cadastrando() {
         };
         adicionarVisita(novaVisita);
 
-        // Limpar o formulário após o envio
         setName("");
         setDate("");
         setTime("");
         setTipoDocumento("");
         setNumeroDocumento("");
         setObservacao("");
-
-        // Redirecionar para a página inicial
         navigate("/");
     };
 

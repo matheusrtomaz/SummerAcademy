@@ -3,13 +3,13 @@ import Rotas from "./routes";
 import { VisitasProvider } from "./context/VisitasContext";
 
 function App() {
-  return (
-    <>
-      <VisitasProvider>
-        <Rotas />
-      </VisitasProvider>
-    </>
-  );
+    return (
+        <>
+            <VisitasProvider>
+                <Rotas />
+            </VisitasProvider>
+        </>
+    );
 }
 
 export default App;

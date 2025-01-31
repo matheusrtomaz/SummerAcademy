@@ -2,23 +2,21 @@ import { useContext } from "react";
 import { VisitasContext } from "../../context/VisitasContext";
 import BtnAddVisita from "../addvisita";
 import style from "./Listagem.module.css";
-import { useNavigate } from "react-router"; // Corrigido aqui
+import { useNavigate } from "react-router";
 import { Pencil, Trash2, Eraser } from "lucide-react";
 
 export default function Listagem() {
     const { visitas, cancelarVisita, cancelar2Visita } =
         useContext(VisitasContext);
-    const navigate = useNavigate(); // Corrigido aqui
+    const navigate = useNavigate();
 
-    // Garante que haja sempre 7 linhas no tbody
     const linhasPreenchidas = [...visitas];
     while (linhasPreenchidas.length < 7) {
-        linhasPreenchidas.push({}); // Adiciona objetos vazios para preencher as linhas
+        linhasPreenchidas.push({});
     }
 
     const handleEditar = (index) => {
-        // Navega para a tela de edição com os dados da visita selecionada
-        navigate("/editar", { state: { ...visitas[index], index } }); // Corrigido aqui
+        navigate("/editar", { state: { ...visitas[index], index } });
     };
 
     const formatarData = (data) => {
@@ -27,9 +25,8 @@ export default function Listagem() {
         return `${dia}/${mes}/${ano}`;
     };
 
-    // Função para determinar o status da visita
     const getStatusVisita = (visita) => {
-        if (!visita || !visita.data || !visita.hora) return ""; //Retornava "Sem informação" no Status
+        if (!visita || !visita.data || !visita.hora) return "";
 
         if (visita.status === "Cancelada") return "Cancelada";
 
@@ -41,7 +38,6 @@ export default function Listagem() {
             : "Visita não realizada";
     };
 
-    // Função para definir a classe do status
     const getStatusClass = (status) => {
         switch (status) {
             case "Visita realizada":
@@ -85,7 +81,7 @@ export default function Listagem() {
                                     {visita.hora || ""}
                                 </td>
                                 <td>
-                                    {visita.nome ? ( // Mostra os botões apenas se houver uma visita válida
+                                    {visita.nome ? (
                                         <>
                                             <button
                                                 className={`${style.button} ${style.edit}`}
@@ -99,7 +95,7 @@ export default function Listagem() {
                                                 />
                                             </button>
 
-                                            {visita.status !== "Cancelado" && ( // Mostra o botão "Cancelar2" apenas se o status NÃO for "Cancelado"
+                                            {visita.status !== "Cancelado" && (
                                                 <button
                                                     className={`${style.button} ${style.cancel}`}
                                                     onClick={() =>
@@ -107,7 +103,9 @@ export default function Listagem() {
                                                     }
                                                 >
                                                     Cancelar visita
-                                                    <Trash2 className={style.icons}/>
+                                                    <Trash2
+                                                        className={style.icons}
+                                                    />
                                                 </button>
                                             )}
 
@@ -118,7 +116,9 @@ export default function Listagem() {
                                                 }
                                             >
                                                 Apagar visita
-                                                <Eraser className={style.icons}/>
+                                                <Eraser
+                                                    className={style.icons}
+                                                />
                                             </button>
                                         </>
                                     ) : null}
